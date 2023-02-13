@@ -1,0 +1,218 @@
+:root{
+  --colorFuente:rgb(160, 205, 255);
+  --colorFondo1:linear-gradient(rgb(23, 30, 156), rgb(44, 94, 138), rgb(5, 20, 136)); 
+}
+html, body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: var(--colorFondo1);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Dangrek', cursive;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    overflow: hidden;
+}
+
+.fila{
+    height: 100%;
+}
+#tabla{
+    display: grid;
+   
+}
+.unidad{
+    border: 1px solid rgb(6, 6, 77);
+    width: 100px;
+    height: 100px;
+    box-shadow: 2px -2px 15px 2px rgb(148, 162, 231);
+    background-repeat: no-repeat;
+    background-color: rgba(1, 60, 255, 0.458);
+    background-size:60%;
+    background-position: 50%;   
+}
+.nivel1{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);    
+}
+.nivel2{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);    
+}
+.nivel3{
+    display: grid;
+    grid-template-columns: repeat(8 , 1fr);
+    grid-template-rows: repeat(4, 1fr); 
+}
+.nivel3 div{
+    width: 80px;
+    height: 80px;
+}
+.nivel4{
+    display: grid;
+    grid-template-columns: repeat(10 , 1fr);
+    grid-template-rows: repeat(4, 1fr); 
+}
+.nivel4 div{
+    width: 80px;
+    height: 80px;
+}
+
+
+.contenedor{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%; 
+    color: var(--colorFuente);
+    margin-top: 15PX;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(82, 143, 228, 0.378);
+    padding: 50px;
+    border-radius: 5%;
+    border: solid 2px rgb(197, 197, 244);
+    margin: 10px;
+}
+.mario{
+    background-image: url(Img/super-mario.png);
+    transition: 0.5s ease;
+    
+}
+.honguito{
+    background-image: url(Img/hongito.png);
+    transition: 0.5s ease;
+    
+}
+.pacman{
+    background-image: url(Img/fantasma.png);
+    transition: 0.5s ease;
+    
+}
+.carita{
+    background-image: url(Img/carita.png);
+    transition: 0.5s ease;
+    
+}
+.moneda{
+    background-image: url(Img/coin.png);
+    transition: 0.5s ease;
+    
+}
+
+.cartaDisabled{
+    background-image: url(Img/estrella.png);
+    background-color: brown;
+    transform: rotate3d(0, 100, 0, 3.142rad);
+    transition: 0.5s ease;
+    box-shadow: 2px -2px 15px 2px rgb(156, 7, 109);
+}
+.cartaAcierto{
+    background: transparent;
+    cursor: auto;
+    border: transparent;
+    box-shadow: none;
+    pointer-events: none;
+    transform: scale3d(4, 4, 0.7);
+}
+.tiempo{
+    align-items: flex-end;
+    background-color: transparent;
+    color: var(--colorFuente);
+    border: solid 1px var(--colorFuente);
+    border: none;
+    padding: 0;
+    width: 35px;
+    height: 50px;
+    text-align: center;  
+    margin: 0;
+    
+}
+.tiempoContenedor{
+    display: flex;
+    color: var(--colorFuente);
+    font-size: 30px;
+    border: 2px solid var(--colorFuente);
+    padding: 10px;
+    background-color: rgba(82, 143, 228, 0.378);
+    border-radius: 5%;
+    height: 100px;
+    margin: 20px;
+    align-items: center;
+    
+}
+.tiempoContenedor p{
+   margin-right:0;
+}
+#reiniciar{
+    color: var(--colorFuente);
+    border: 1px solid rgb(131, 13, 104);
+    background-color: brown;
+    border-radius: 5%;
+    margin-left: 50px;
+    font-size: 18px;
+    text-transform: capitalize;
+    height: 50px;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.Modal{  
+    background-color: rgba(170, 9, 9, 0.68);
+    color: var(--colorFuente);
+    border: 1px solid var(--colorFuente);
+    height: 100%;
+    width: 80%;
+    margin-top: 26%;
+}
+.modal-header{
+    display: block;
+    text-align: center; 
+}
+.boton{
+    background-color: rgba(255, 69, 1, 0.754);
+    text-transform: capitalize;
+    
+}
+#error{
+    display: none;
+    width: 300px;
+    height: 300px;
+    margin-top: 50%;
+}
+@media (max-width:948px) {
+    #tabla{
+        position: absolute;
+        bottom: 10%;
+        z-index: 1;
+    }
+    #tabla div{
+        height: 75px;
+        width: 75px;
+        min-height: 20px;
+    }
+    .nivel4{
+        grid-template-columns: repeat(10 , 1fr);
+        grid-template-rows: repeat(4, 1fr); 
+    }
+    .content{
+        width: 100vh;
+        border-bottom: none;
+        border-radius: none;
+    }
+}
+@media (max-width:620px) {
+    main{
+        display: none;
+    }
+    #error{
+        display: flex;
+    }
+}

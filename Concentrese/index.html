@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Focus</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <!-- CSS only -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dangrek&family=Reem+Kufi+Ink&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="tiempoContenedor content" id="error">
+    <p>Lo sentimos, el juego no está disponible en esta resolución</p>
+</div>
+  <main>
+    <div class="contenedor">
+        <h1>FOCUS</h1>
+    </div> 
+    <div class="content">
+        <div id="tabla">
+
+        </div>
+        <div class="tiempoContenedor content">
+            <p id="time">Tiempo</p>
+            <input type="text" class="tiempo" id="minutes" disabled value="0 :" readonly/>
+            <!-- //Aquí los minutos -->
+            <input type="text" class="tiempo" id="seconds" disabled value="0" readonly />
+            <!-- // Aquí los segundos -->
+            <button id="reiniciar">Reiniciar</button>
+        </div>
+    </div>
+    <div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content Modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">¡PERFECTO!</h5>
+            </div>
+            <div class="modal-body">
+                <p id="time">Tiempo utilizado:</p>
+                <input type="text" class="tiempo" id="minutesModal" disabled value="0 :" readonly/>
+                <!-- //Aquí los minutos -->
+                <input type="text" class="tiempo" id="secondsModal" disabled value="0" readonly />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary boton" data-bs-dismiss="modal" id="reiniciarModal"> repetir nivel</button>
+              <button type="button" class="btn btn-primary boton" id="siguienteModal">Siguente</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="script.js"></script>  
+</body>
+
+</html>
